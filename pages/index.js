@@ -69,6 +69,20 @@ const logoContainer = css`
     }
 `;
 
+const shadowContainer = css`
+    width: 40vw;
+    position: absolute;
+    bottom: 5vh;
+    z-index: -1;
+    filter: blur(4px);
+    -webkit-animation: fadeInFromNone 10s infinite;
+    animation: fadeInFromNone 10s infinite;
+
+    img {
+        width: 100%;
+    }
+`;
+
 const Index = () => {
     const router = useRouter();
     console.log(router);
@@ -76,6 +90,9 @@ const Index = () => {
     return (
         <ThemeProvider theme={theme}>
             <div css={mainContainer}>
+                <div css={shadowContainer}>
+                    <img src="../static/images/shadow.png" />
+                </div>
                 <div css={logoContainer}>
                     <img src="../static/images/logo_jiff.png" />
                 </div>
