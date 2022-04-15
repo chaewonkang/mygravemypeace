@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
 			height: 100vh;
 			overflow-x: hidden;
 			margin: 0;
-		  }
+		              }
 
 		  #__next {
 			  width: 100vw;

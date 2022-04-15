@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="footer_container">
+<div className="footer_container">
       <div className="footer_inner">
         <div>
           <span>Business Registration</span>
