@@ -9,11 +9,6 @@ const PageLayout = ({ children }) => {
 
     return (
         <div>
-            {transparentPage === router.asPath ? (
-                <Header isTransparent />
-            ) : (
-                <Header isTransparent={false} />
-            )}
             <div id="body">{children}</div>
             {includePage.includes(router.asPath) && <Footer />}
         </div>
