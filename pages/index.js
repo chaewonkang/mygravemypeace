@@ -303,8 +303,8 @@ const shadowContainer = css`
     }
 
     @media screen and (max-width: 782px) {
-        width: 30%;
-        height: 50%;
+        width: 40%;
+        height: 70%;
         position: absolute;
         bottom: 15%;
         -webkit-animation: moveFromRight 45s infinite;
