@@ -188,42 +188,50 @@ const floorContainer = css`
 `;
 
 const glitches = css`
-    position: fixed;
-    width: auto;
+    position: absolute;
+    width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 20%;
     margin-left: 10px;
 `;
 
 const glitches2 = css`
-    position: fixed;
-    width: auto;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: auto;
     top: calc(20% + 20px);
     margin-left: 10px;
-    font-size: 16px;
 `;
 
 const main = css`
     color: #fff;
+    width: 100vw;
+    font-size: 15px;
     animation: fade 10s infinite;
     font-family: "Source code", monospace; ;
 `;
 
 const letters = css`
+    width: 100vw;
+    font-size: 15px;
     position: absolute;
     top: 0;
     left: 0;
     display: flex;
     color: #fff;
-    filter: blur(2px);
+    filter: blur(1px);
     font-family: "Source code", monospace;
 `;
 
 const letter = css`
     animation: up 10s infinite linear;
     margin: 0;
-    width: 100%;
 
     &:nth-child(1) {
         animation-delay: 0.3s;
@@ -383,7 +391,7 @@ const Index = () => {
                     '<div class="drop" style="left: ' +
                     increment +
                     "%; bottom: " +
-                    (randoFiver + randoFiver - 1 + 85) +
+                    (randoFiver + randoFiver - 1 + 100) +
                     "%; animation-delay: 0." +
                     randoHundo +
                     "s; animation-duration: 0.5" +
@@ -424,8 +432,8 @@ const Index = () => {
         makeItRain();
     }, []);
 
-    const scriptArr = ["King", "Lear,", "Fear", "and", "Loathing"];
-    const scriptArr2 = ["Jean–", "Luc", "Godard, ", "Suisse, ", "1987"];
+    const scriptArr = ["So be", "my grave", "my peace", "as here", "I give"];
+    const scriptArr2 = ["Her", "father’s", "heart,", "from", "her..."];
 
     return (
         <div
@@ -434,6 +442,22 @@ const Index = () => {
                 height: `${size.height}px`,
             }}
         >
+            <div css={glitches}>
+                <span css={main}>King Lear, Fear and Loathing</span>
+                <div css={letters}>
+                    {scriptArr.map(v => {
+                        return <span css={letter}>{v}&nbsp;</span>;
+                    })}
+                </div>
+            </div>
+            <div css={glitches2}>
+                <span css={main}>Jean-Luc Godard, Suisse, 1987</span>
+                <div css={letters}>
+                    {scriptArr2.map(v => {
+                        return <span css={letter}>{v}&nbsp;</span>;
+                    })}
+                </div>
+            </div>
             <div css={mainContainer}>
                 <div className="body">
                     <div className="back-row-toggle splat-toggle">
@@ -463,22 +487,6 @@ const Index = () => {
                 </div>
                 <div css={woodGrave}>
                     <img src="../static/images/grave_3.png" />
-                </div>
-                <div css={glitches}>
-                    <span css={main}>King Lear, Fear and Loathing</span>
-                    <div css={letters}>
-                        {scriptArr.map(v => {
-                            return <span css={letter}>{v}&nbsp;</span>;
-                        })}
-                    </div>
-                </div>
-                <div css={glitches2}>
-                    <span css={main}>Jean-Luc Godard, Suisse, 1987</span>
-                    <div css={letters}>
-                        {scriptArr2.map(v => {
-                            return <span css={letter}>{v}&nbsp;</span>;
-                        })}
-                    </div>
                 </div>
             </div>
             <Link href="https://instagram.com/yinyang.fig" target="_blank">
